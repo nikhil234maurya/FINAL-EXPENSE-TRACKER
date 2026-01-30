@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="history.css">
+    <style>
+  .history {
+    display: none; /* JS isse block karega */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #050505 !important; /* Image jaisa dark */
+    z-index: 999999 !important;
+    color: white !important;
+    overflow-y: auto;
+  }
+  .history.open {
+    display: block !important;
+  }
+</style>
+</head>
+
+<body>
+    <div class="home">
+    <div class="app-container">
+        <header class="header">
+            <div class="user-info">
+                <div class="avatar">👤</div>
+                <div>
+                    <p class="label">PRIVATE CLIENT</p>
+                    <p class="account-name">Master Account</p>
+                </div>
+            </div>
+            <div class="shield-icon">🛡️</div>
+        </header>
+
+        <section class="net-worth">
+            <p class="section-title">NET WORTH SUMMARY</p>
+            <h1 class="total-amount">0</h1>
+            <!-- <h2 class="rs">₹</h2> -->
+         
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="icon-up">↗</div>
+                <p class="label">INFLOW</p>
+                <h3 class="inflow">0</h3>
+            </div>
+            <div class="stat-card">
+                <div class="icon-down">↘</div>
+                <p class="label">OUTFLOW</p>
+                <h3 class="outflow">0</h3>
+            </div>
+        </div>
+
+        <div class="ledgerList">
+            <div class="ledger-header">
+                <span>LEDGER STREAM</span>
+                <span class="view-archive">VIEW ARCHIVE</span>                   
+            </div>
+          <!-- baaki ka js hi likhega -->
+            
+        </div>
+
+        <nav class="bottom-nav">
+            <button class="historybtn">ALL TRANSACTIONS</button>
+           
+           
+            <button class="plusbtn">+</button>
+            
+            
+            
+        </nav>
+    </div>
+    </div>
+
+
+
+
+
+      
+</div>
+
+
+<div class="form">
+
+
+
+<div class="ledger-modal">
+
+
+    <header>
+        <div class="title-group">
+            <h1>New Statement</h1>
+            <p class="subtitle">MANUAL ASSET LEDGER</p>
+        </div>
+        <button class="close-btn">&times;</button>
+    </header>
+
+    <section class="capital-section">
+        <label class="label">ENTER AMOUNT</label>
+        <div class="amount-display">
+            <span class="currency">₹</span>
+            <input class="amount-input" placeholder="0" >
+        </div>
+    </section>
+
+    <div class="input-card">
+        <div class="input-group">
+            <label><i class="icon">T</i> TRANSACTION REFERENCE</label>
+            <input class="note" type="text" placeholder="Merchant, client or description...">
+        </div>
+
+        <div class="row">
+            <div class="input-group flex-1">
+                <label><i class="icon">⇄</i> FLOW</label>
+                <select class="type">
+                    <option value="outflow">Outflow</option>
+                    <option value="inflow">Inflow</option>
+                </select>
+            </div>
+            <div class="input-group flex-1">
+                <label><i class="icon">🏷</i> SECTOR</label>
+                <select class="category">
+                    <option>Food & Dining</option>
+                    <option>Transport</option>
+                    <option>Shopping</option>
+                    <option>Salary</option>
+                    <option>Bills</option>
+                    <option>Health</option>
+                    <option>Education</option>
+                    <option>Entertainment</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <button class="save">CONFIRM SECURE ENTRY</button>
+</div>
+
+
+
+
+</div> </div> <div class="history">
+      <div class="history-container">
+         
+          <div class="transaction-list"></div>
+          <button class="history-close">❌</button>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+
+
+    
+    
+
+</html>
