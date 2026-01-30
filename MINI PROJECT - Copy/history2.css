@@ -1,0 +1,54 @@
+.history {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  z-index: 1000;
+}
+
+.history.open {
+  display: block;
+}
+
+.form,
+.history {
+  pointer-events: none;
+}
+
+.form.open,
+.history.open {
+  pointer-events: auto;
+}
+
+
+.history-content {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.history-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* reuse your existing card styles */
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

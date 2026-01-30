@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form">
+
+
+
+<div class="ledger-modal">
+
+
+    <header>
+        <div class="title-group">
+            <h1>New Statement</h1>
+            <p class="subtitle">MANUAL ASSET LEDGER</p>
+        </div>
+        <button class="close-btn">&times;</button>
+    </header>
+
+    <section class="capital-section">
+        <label class="label">ENTER AMOUNT</label>
+        <div class="amount-display">
+            <span class="currency">₹</span>
+            <input class="amount-input" placeholder="0" >
+        </div>
+    </section>
+
+    <div class="input-card">
+        <div class="input-group">
+            <label><i class="icon">T</i> TRANSACTION REFERENCE</label>
+            <input class="note" type="text" placeholder="Merchant, client or description...">
+        </div>
+
+        <div class="row">
+            <div class="input-group flex-1">
+                <label><i class="icon">⇄</i> FLOW</label>
+                <select class="type">
+                    <option value="outflow">Outflow</option>
+                    <option value="inflow">Inflow</option>
+                </select>
+            </div>
+            <div class="input-group flex-1">
+                <label><i class="icon">🏷</i> SECTOR</label>
+                <select class="category">
+                    <option>Food & Dining</option>
+                    <option>Transport</option>
+                    <option>Shopping</option>
+                    <option>Salary</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <button class="save">CONFIRM SECURE ENTRY</button>
+</div>
+</body>
+</html>

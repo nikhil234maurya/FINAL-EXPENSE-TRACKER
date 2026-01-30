@@ -1,0 +1,125 @@
+
+:root {
+    --bg-black: #0a0a0a;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-muted: #666;
+    --text-main: #fff;
+}
+
+
+.form {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.97);
+  display: none;              /* 🔥 THIS WAS MISSING */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.form.open {
+  display: flex;
+}
+.form,
+.history {
+  pointer-events: none;
+}
+
+.form.open,
+.history.open {
+  pointer-events: auto;
+}
+
+
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.ledger-modal {
+    width: 400px;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 { font-size: 24px; font-weight: 400; margin: 0; }
+.subtitle { font-size: 10px; color: var(--text-muted); letter-spacing: 2px; margin-top: 5px; }
+
+.close-btn {
+    position: absolute; top: 20px; right: 20px;
+    background: rgba(255,255,255,0.05); border: 1px solid var(--border-color);
+    color: white; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+}
+
+/* Capital Value Section */
+.capital-section { margin: 60px 0; }
+.capital-section label { font-size: 12px; letter-spacing: 4px; color: var(--text-muted); }
+
+.amount-display { font-size: 80px; font-weight: 200; display: flex; justify-content: center; align-items: center; color: #333; }
+.currency { font-size: 120px; margin-right: 15px; color: #222; margin-top:20px; }
+
+/* The Input Card */
+
+.amount-input{
+    height:130px;
+    font-size:100px;
+    border:none;
+    margin-bottom:-20px;
+}
+
+
+
+
+.input-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.input-group label {
+    display: block; font-size: 10px; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px;
+}
+
+input, select {
+    width: 100%; background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-color); border-radius: 12px;
+    padding: 15px; color: white; margin-bottom: 20px;
+}
+
+.row { display: flex; gap: 15px; }
+.flex-1 { flex: 1; }
+
+.type{
+    background-color: rgb(0, 0, 0);;
+}
+
+.category{
+    background-color: black;
+}
+
+/* Confirm Button */
+.save {
+    width: 100%; padding: 25px; border-radius: 50px;
+    border: none; background: white; color: black;
+    font-weight: 700; letter-spacing: 2px; cursor: pointer;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.confirm-btn:hover { transform: scale(1.02); box-shadow: 0 0 40px rgba(255, 255, 255, 0.2); }
+
+.total-amount{
+    height:90px;
+    font-size:100px;
+
+}
+

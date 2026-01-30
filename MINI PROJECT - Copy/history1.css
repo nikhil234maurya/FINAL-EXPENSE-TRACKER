@@ -1,0 +1,107 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0c10; /* Dark background */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.app-container {
+    width: 100%;
+    max-width: 10000px; /* Mobile width mimic */
+    padding: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: #1a1b1e;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    color: #555;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Floating Action Button (+) */
+.fab {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 65px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    width: 90%;
+    max-width: 380px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+    color: #666;
+    font-size: 0.65rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-item.active {
+    color: #ffffff;
+}
